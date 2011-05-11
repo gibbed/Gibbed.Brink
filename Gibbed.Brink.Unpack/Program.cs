@@ -104,7 +104,7 @@ namespace Gibbed.Brink.Unpack
                 var pkg = new PackageFile();
                 pkg.Deserialize(input);
 
-                long current = 0;
+                long current = 1;
                 long total = pkg.Entries.Count;
 
                 foreach (var entry in pkg.Entries)

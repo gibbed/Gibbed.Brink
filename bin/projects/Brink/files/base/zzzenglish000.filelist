@@ -1,4 +1,4 @@
-; 799/5796 (13%)
+; 807/5796 (13%)
 /generated/sound/localization/english/msadpcm/ambient_vo/env_aq_elvt_top_fl.msadpcm
 /generated/sound/localization/english/msadpcm/ambient_vo/env_aq_elvtr_btm_fl.msadpcm
 /generated/sound/localization/english/msadpcm/ambient_vo/env_aq_exhibq_003.msadpcm
@@ -62,6 +62,7 @@
 /generated/sound/localization/english/msadpcm/contextual/gen_cntxl_003d.msadpcm
 /generated/sound/localization/english/msadpcm/contextual/gen_cntxl_005c.msadpcm
 /generated/sound/localization/english/msadpcm/contextual/gen_cntxl_006c.msadpcm
+/generated/sound/localization/english/msadpcm/contextual/gen_cntxl_007b.msadpcm
 /generated/sound/localization/english/msadpcm/contextual/gen_cntxl_010.msadpcm
 /generated/sound/localization/english/msadpcm/contextual/gen_cntxl_010b.msadpcm
 /generated/sound/localization/english/msadpcm/contextual/gen_cntxl_011c.msadpcm
@@ -106,8 +107,10 @@
 /generated/sound/localization/english/msadpcm/contextual/gen_cntxl_turret_03b.msadpcm
 /generated/sound/localization/english/msadpcm/contextual/gen_cntxl_turret_03c.msadpcm
 /generated/sound/localization/english/msadpcm/contextual/gen_cntxl_turret_03d.msadpcm
+/generated/sound/localization/english/msadpcm/teamboss/resistance/che_all_cmndpost_tkng_001.msadpcm
 /generated/sound/localization/english/msadpcm/teamboss/resistance/che_all_mission_start_go_002.msadpcm
 /generated/sound/localization/english/msadpcm/teamboss/resistance/che_all_new_obj_001.msadpcm
+/generated/sound/localization/english/msadpcm/teamboss/resistance/che_aq_strgrmchrg_emy_plntd_01b.msadpcm
 /generated/sound/localization/english/msadpcm/teamboss/security/mok_all_cmndpost_tkn_001.msadpcm
 /generated/sound/localization/english/msadpcm/teamboss/security/mok_all_cmndpost_tkn_002.msadpcm
 /generated/sound/localization/english/msadpcm/teamboss/security/mok_all_cmndpost_tkng_001.msadpcm
@@ -208,6 +211,7 @@
 /generated/sound/localization/english/msadpcm/teamboss/security/mok_tm_mnfrm_hck_rmndr_001.msadpcm
 /generated/sound/localization/english/msadpcm/teamboss/security/mok_tm_safe_opn_001.msadpcm
 /generated/sound/localization/english/msadpcm/teamboss/security/mok_tm_safe_opn_rmndr_001.msadpcm
+/generated/sound/localization/english/msadpcm/vo/cutscenes/che_aq_load_screen_01.msadpcm
 /generated/sound/localization/english/msadpcm/vo/cutscenes/che_aq_lose_001.msadpcm
 /generated/sound/localization/english/msadpcm/vo/cutscenes/che_aq_win_001.msadpcm
 /generated/sound/localization/english/msadpcm/vo/cutscenes/che_cc_lose_001.msadpcm
@@ -307,6 +311,7 @@
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_1/autochatter/generic/all/gen_all_hlthcmndpst_captd_001.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_1/autochatter/generic/all/gen_all_hlthcmndpst_captng_001.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_1/autochatter/generic/all/gen_all_hlthcmndpst_captng_002.msadpcm
+/generated/sound/localization/english/msadpcm/voicepacks/voicepack_1/autochatter/generic/all/gen_all_mg_bld_001.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_1/autochatter/generic/all/gen_all_mg_bldng_001.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_1/autochatter/generic/all/gen_all_mg_blt_001.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_1/autochatter/generic/all/gen_all_plntdchrg_001.msadpcm
@@ -336,6 +341,7 @@
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_1/autochatter/soldier/en_ply_voice1_sol_007.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_1/autochatter/soldier/en_ply_voice1_sol_012.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_2/autochatter/engineer/en_ply_voice1_eng_010.msadpcm
+/generated/sound/localization/english/msadpcm/voicepacks/voicepack_2/autochatter/engineer/eng_med_turrt_dpld_001.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_2/autochatter/generic/all/gen_all_buffed_009.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_2/autochatter/generic/all/gen_all_buffed_017.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_2/autochatter/generic/all/gen_all_buffed_018.msadpcm
@@ -357,6 +363,7 @@
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_2/autochatter/generic/all/gen_all_splycpost_capt_002.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_2/autochatter/generic/all/gen_all_splycpost_captd_001.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_2/autochatter/generic/all/gen_all_splycpost_captng_002.msadpcm
+/generated/sound/localization/english/msadpcm/voicepacks/voicepack_2/autochatter/generic/aquarium/gen_aq_strgrmchrg_dsrmd_001.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_2/autochatter/generic/ccity/gen_cc_maintbot_grd_002.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_2/autochatter/generic/ccity/gen_cc_smpl_get_001.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_2/autochatter/generic/refuel/gen_ref_fuelad_grd_002.msadpcm
@@ -665,6 +672,7 @@
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_6/autochatter/operative/op_hckd_002.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_6/autochatter/soldier/en_ply_voice1_sol_013.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_6/autochatter/soldier/en_ply_voice1_sol_021.msadpcm
+/generated/sound/localization/english/msadpcm/voicepacks/voicepack_7/autochatter/generic/all/gen_all_dwn_001.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_7/autochatter/generic/all/gen_all_enmy_mult_sptd_001.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_7/autochatter/generic/all/gen_all_enmy_sptd_001.msadpcm
 /generated/sound/localization/english/msadpcm/voicepacks/voicepack_7/autochatter/generic/all/gen_all_escrt_you_003.msadpcm

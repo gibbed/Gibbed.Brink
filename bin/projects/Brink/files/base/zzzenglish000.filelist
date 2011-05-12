@@ -1,4 +1,4 @@
-; 807/5796 (13%)
+; 821/5796 (14%)
 /generated/sound/localization/english/msadpcm/ambient_vo/env_aq_elvt_top_fl.msadpcm
 /generated/sound/localization/english/msadpcm/ambient_vo/env_aq_elvtr_btm_fl.msadpcm
 /generated/sound/localization/english/msadpcm/ambient_vo/env_aq_exhibq_003.msadpcm
@@ -51,6 +51,17 @@
 /generated/sound/localization/english/msadpcm/broadcasts/mok_brdcst_03.msadpcm
 /generated/sound/localization/english/msadpcm/broadcasts/mok_brdcst_04.msadpcm
 /generated/sound/localization/english/msadpcm/broadcasts/mok_brdcst_05.msadpcm
+/generated/sound/localization/english/msadpcm/challenges/challenge_5_01.msadpcm
+/generated/sound/localization/english/msadpcm/challenges/challenge_5_02.msadpcm
+/generated/sound/localization/english/msadpcm/challenges/challenge_5_07.msadpcm
+/generated/sound/localization/english/msadpcm/challenges/challenge_5_09.msadpcm
+/generated/sound/localization/english/msadpcm/challenges/challenge_5_10.msadpcm
+/generated/sound/localization/english/msadpcm/challenges/challenge_5_11.msadpcm
+/generated/sound/localization/english/msadpcm/challenges/challenge_5_12.msadpcm
+/generated/sound/localization/english/msadpcm/challenges/challenge_5_13.msadpcm
+/generated/sound/localization/english/msadpcm/challenges/challenge_5_14.msadpcm
+/generated/sound/localization/english/msadpcm/challenges/challenge_5_15.msadpcm
+/generated/sound/localization/english/msadpcm/challenges/challenge_5_16.msadpcm
 /generated/sound/localization/english/msadpcm/challenges/challenge_6_15.msadpcm
 /generated/sound/localization/english/msadpcm/challenges/challenge_6_21.msadpcm
 /generated/sound/localization/english/msadpcm/challenges/challenge_6_22.msadpcm
@@ -108,8 +119,11 @@
 /generated/sound/localization/english/msadpcm/contextual/gen_cntxl_turret_03c.msadpcm
 /generated/sound/localization/english/msadpcm/contextual/gen_cntxl_turret_03d.msadpcm
 /generated/sound/localization/english/msadpcm/teamboss/resistance/che_all_cmndpost_tkng_001.msadpcm
+/generated/sound/localization/english/msadpcm/teamboss/resistance/che_all_end_lose_54321_001.msadpcm
 /generated/sound/localization/english/msadpcm/teamboss/resistance/che_all_mission_start_go_002.msadpcm
 /generated/sound/localization/english/msadpcm/teamboss/resistance/che_all_new_obj_001.msadpcm
+/generated/sound/localization/english/msadpcm/teamboss/resistance/che_all_time_left_10s_001.msadpcm
+/generated/sound/localization/english/msadpcm/teamboss/resistance/che_all_time_left_30s_001.msadpcm
 /generated/sound/localization/english/msadpcm/teamboss/resistance/che_aq_strgrmchrg_emy_plntd_01b.msadpcm
 /generated/sound/localization/english/msadpcm/teamboss/security/mok_all_cmndpost_tkn_001.msadpcm
 /generated/sound/localization/english/msadpcm/teamboss/security/mok_all_cmndpost_tkn_002.msadpcm

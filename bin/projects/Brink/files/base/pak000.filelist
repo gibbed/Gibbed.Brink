@@ -1,4 +1,4 @@
-; 12795/14888 (85%)
+; 12826/14888 (86%)
 /_vmtrpages.vpf
 /_vmtrpages.vpf_dct_srgb
 /animations/challenges/challenge01/camera.md5camera
@@ -160,6 +160,8 @@
 /char/characters/mp_bots/bot_05_alterego.ccfinstance
 /char/characters/mp_bots/bot_06.ccfinstance
 /char/characters/mp_bots/bot_06_alterego.ccfinstance
+/char/characters/mp_bots/bot_07.ccfinstance
+/char/characters/mp_bots/bot_07_alterego.ccfinstance
 /char/characters/mp_bots/bot_08.ccfinstance
 /char/characters/mp_bots/bot_08_alterego.ccfinstance
 /char/characters/mp_bots/bot_09.ccfinstance
@@ -8531,6 +8533,7 @@
 /generated/imgb/generic/00000090/6b179890.imgb
 /generated/imgb/generic/00000090/f0763c90.imgb
 /generated/imgb/generic/00000091/835e2091.imgb
+/generated/imgb/generic/00000091/f0b72891.imgb
 /generated/imgb/generic/00000092/30f61092.imgb
 /generated/imgb/generic/00000095/236ac895.imgb
 /generated/imgb/generic/00000098/a2021498.imgb
@@ -9104,6 +9107,7 @@
 /generated/imgb/generic/0000031e/23bd971e.imgb
 /generated/imgb/generic/0000031e/b9ac971e.imgb
 /generated/imgb/generic/0000031f/3f7dc71f.imgb
+/generated/imgb/generic/0000031f/513ad31f.imgb
 /generated/imgb/generic/0000031f/8ebacb1f.imgb
 /generated/imgb/generic/00000320/9946eb20.imgb
 /generated/imgb/generic/00000323/3372ab23.imgb
@@ -9888,10 +9892,14 @@
 /generated/mdlb/models/env/challenges/electronics_01.mdlb
 /generated/mdlb/models/env/challenges/electronics_02.mdlb
 /generated/mdlb/models/env/challenges/electronics_03.mdlb
+/generated/mdlb/models/env/challenges/floor_carrytarget_type_01.mdlb
+/generated/mdlb/models/env/challenges/glowing_tubebeam.mdlb
 /generated/mdlb/models/env/challenges/graf_arrow.mdlb
 /generated/mdlb/models/env/challenges/graf_bomb_plant.mdlb
 /generated/mdlb/models/env/challenges/graf_fix_it.mdlb
 /generated/mdlb/models/env/challenges/graf_hack_this.mdlb
+/generated/mdlb/models/env/challenges/light_base_01.mdlb
+/generated/mdlb/models/env/challenges/light_base_01b.mdlb
 /generated/mdlb/models/env/challenges/start_line_01.mdlb
 /generated/mdlb/models/env/challenges/start_line_02.mdlb
 /generated/mdlb/models/env/challenges/start_line_03.mdlb
@@ -10401,6 +10409,8 @@
 /generated/preload/sound/pc/english/maps/mp/shipyard_loading.soundpreload
 /generated/preload/sound/pc/english/maps/mp/terminal.soundpreload
 /generated/preload/sound/pc/english/maps/mp/terminal_loading.soundpreload
+/generated/preload/sound/pc/english/maps/sp/challenge_05.soundpreload
+/generated/preload/sound/pc/english/maps/sp/challenge_05_loading.soundpreload
 /generated/preload/sound/pc/english/maps/sp/challenge_06.soundpreload
 /generated/preload/sound/pc/english/maps/sp/challenge_06_loading.soundpreload
 /generated/shadercache/glsl/source/1023994863.v
@@ -11285,10 +11295,14 @@
 /generated/sound/nolocalization/msadpcm/music/ccity/sec_ccity_no_action01.msadpcm
 /generated/sound/nolocalization/msadpcm/music/ccity/sec_ccity_repaircrane.msadpcm
 /generated/sound/nolocalization/msadpcm/music/ccity/sec_ccity_spawn.msadpcm
+/generated/sound/nolocalization/msadpcm/music/challenges/challenge_load_1.msadpcm
 /generated/sound/nolocalization/msadpcm/music/challenges/challenge_load_2.msadpcm
+/generated/sound/nolocalization/msadpcm/music/challenges/challenge_load_3.msadpcm
 /generated/sound/nolocalization/msadpcm/music/challenges/challenge_load_4.msadpcm
 /generated/sound/nolocalization/msadpcm/music/challenges/challenge_res_intro.msadpcm
 /generated/sound/nolocalization/msadpcm/music/challenges/cutscene_start.msadpcm
+/generated/sound/nolocalization/msadpcm/music/challenges/gen_challenge_lose.msadpcm
+/generated/sound/nolocalization/msadpcm/music/challenges/stab_good_2.msadpcm
 /generated/sound/nolocalization/msadpcm/music/changeclass_1.msadpcm
 /generated/sound/nolocalization/msadpcm/music/changeclass_2.msadpcm
 /generated/sound/nolocalization/msadpcm/music/disguise_music.msadpcm
@@ -12555,7 +12569,12 @@
 /maps/sp/challenge_03.entities
 /maps/sp/challenge_03.vpf
 /maps/sp/challenge_03.vpf_dct_srgb
+/maps/sp/challenge_05.aas_playerb
+/maps/sp/challenge_05.bot_entities
+/maps/sp/challenge_05.cmb
 /maps/sp/challenge_05.entities
+/maps/sp/challenge_05.procb
+/maps/sp/challenge_05.sgeo
 /maps/sp/challenge_05.vpf
 /maps/sp/challenge_05.vpf_dct_srgb
 /maps/sp/challenge_06.aas_playerb
@@ -12768,6 +12787,18 @@
 /mapscripts/mp/shipyard/syrint_cutter.mscr
 /mapscripts/mp/shipyard/sysint_csc.mscr
 /mapscripts/mp/shipyard/sysint_cutter.mscr
+/mapscripts/sp/challenge_05/bonus_payout.mscr
+/mapscripts/sp/challenge_05/bonus_score.mscr
+/mapscripts/sp/challenge_05/bonuscounter.mscr
+/mapscripts/sp/challenge_05/capture_zone.mscr
+/mapscripts/sp/challenge_05/casecounter.mscr
+/mapscripts/sp/challenge_05/co_op_start.mscr
+/mapscripts/sp/challenge_05/cutscene.mscr
+/mapscripts/sp/challenge_05/matchcontroller.mscr
+/mapscripts/sp/challenge_05/musicstop_state.mscr
+/mapscripts/sp/challenge_05/score_res.mscr
+/mapscripts/sp/challenge_05/state_star.mscr
+/mapscripts/sp/challenge_05/switch.mscr
 /mapscripts/sp/challenge_06/carry_target_switch.mscr
 /mapscripts/sp/challenge_06/carryable.mscr
 /mapscripts/sp/challenge_06/commandpost.mscr

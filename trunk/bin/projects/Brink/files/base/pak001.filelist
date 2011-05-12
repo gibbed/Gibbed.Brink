@@ -1,4 +1,4 @@
-; 161/166 (96%)
+; 162/166 (97%)
 /char/overlays/neutral/bodies/russian_tattoo_01.ccfimage
 /char/overlays/neutral/bodies/russian_tattoo_01.ccfimghd
 /credits.dat
@@ -105,6 +105,7 @@
 /generated/shadercache/glsl/source/3426710333.f
 /generated/shadercache/glsl/source/3437909228.f
 /generated/shadercache/glsl/source/3475536028.f
+/generated/shadercache/glsl/source/3550755237.f
 /generated/shadercache/glsl/source/3578023476.f
 /generated/shadercache/glsl/source/3582388680.f
 /generated/shadercache/glsl/source/3588976678.f

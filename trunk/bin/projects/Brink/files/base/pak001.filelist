@@ -1,4 +1,4 @@
-; 136/166 (81%)
+; 155/166 (93%)
 /char/overlays/neutral/bodies/russian_tattoo_01.ccfimage
 /char/overlays/neutral/bodies/russian_tattoo_01.ccfimghd
 /credits.dat
@@ -26,6 +26,7 @@
 /generated/decl2/base/system_dep.declb
 /generated/imgb/generic/000003f2/0cd207f2.imgb
 /generated/shadercache/glsl/source/1062479767.f
+/generated/shadercache/glsl/source/116221230.f
 /generated/shadercache/glsl/source/118120774.f
 /generated/shadercache/glsl/source/1210978233.v
 /generated/shadercache/glsl/source/1221524858.f
@@ -33,9 +34,11 @@
 /generated/shadercache/glsl/source/131692474.v
 /generated/shadercache/glsl/source/1392216652.f
 /generated/shadercache/glsl/source/14475311.f
+/generated/shadercache/glsl/source/1498078273.f
 /generated/shadercache/glsl/source/152790904.v
 /generated/shadercache/glsl/source/1532114890.f
 /generated/shadercache/glsl/source/1533268256.f
+/generated/shadercache/glsl/source/1564381091.f
 /generated/shadercache/glsl/source/1567997304.f
 /generated/shadercache/glsl/source/1570719241.f
 /generated/shadercache/glsl/source/1574817914.f
@@ -44,11 +47,15 @@
 /generated/shadercache/glsl/source/1656713881.f
 /generated/shadercache/glsl/source/16620727.v
 /generated/shadercache/glsl/source/1701184442.f
+/generated/shadercache/glsl/source/175524182.f
 /generated/shadercache/glsl/source/1838493540.f
+/generated/shadercache/glsl/source/1890076493.f
+/generated/shadercache/glsl/source/1926423429.f
 /generated/shadercache/glsl/source/1942979261.f
 /generated/shadercache/glsl/source/1979165421.f
 /generated/shadercache/glsl/source/1997830407.v
 /generated/shadercache/glsl/source/2121796107.f
+/generated/shadercache/glsl/source/2125680636.f
 /generated/shadercache/glsl/source/2158029227.f
 /generated/shadercache/glsl/source/2192563386.f
 /generated/shadercache/glsl/source/2200898218.f
@@ -56,11 +63,13 @@
 /generated/shadercache/glsl/source/22714360.f
 /generated/shadercache/glsl/source/2322477528.f
 /generated/shadercache/glsl/source/2379020314.f
+/generated/shadercache/glsl/source/2412635345.f
 /generated/shadercache/glsl/source/2459692087.f
 /generated/shadercache/glsl/source/2481641766.v
 /generated/shadercache/glsl/source/2551465840.f
 /generated/shadercache/glsl/source/2553519142.f
 /generated/shadercache/glsl/source/257271355.f
+/generated/shadercache/glsl/source/2648734498.f
 /generated/shadercache/glsl/source/2714595854.f
 /generated/shadercache/glsl/source/2755935169.f
 /generated/shadercache/glsl/source/2762661302.f
@@ -70,15 +79,18 @@
 /generated/shadercache/glsl/source/2858692790.f
 /generated/shadercache/glsl/source/2869275782.f
 /generated/shadercache/glsl/source/2873320230.v
+/generated/shadercache/glsl/source/2936698951.f
 /generated/shadercache/glsl/source/2946798100.f
 /generated/shadercache/glsl/source/2950342747.v
 /generated/shadercache/glsl/source/2952519211.f
 /generated/shadercache/glsl/source/2965426277.f
+/generated/shadercache/glsl/source/3010132006.f
 /generated/shadercache/glsl/source/3022553820.v
 /generated/shadercache/glsl/source/3028300441.v
 /generated/shadercache/glsl/source/3032396227.v
 /generated/shadercache/glsl/source/306897702.f
 /generated/shadercache/glsl/source/3089040473.f
+/generated/shadercache/glsl/source/3140058801.f
 /generated/shadercache/glsl/source/3200405828.f
 /generated/shadercache/glsl/source/3251833470.f
 /generated/shadercache/glsl/source/3320035970.f
@@ -86,6 +98,8 @@
 /generated/shadercache/glsl/source/3362105312.f
 /generated/shadercache/glsl/source/3392357315.f
 /generated/shadercache/glsl/source/3426710333.f
+/generated/shadercache/glsl/source/3437909228.f
+/generated/shadercache/glsl/source/3475536028.f
 /generated/shadercache/glsl/source/3578023476.f
 /generated/shadercache/glsl/source/3582388680.f
 /generated/shadercache/glsl/source/3588976678.f
@@ -105,9 +119,11 @@
 /generated/shadercache/glsl/source/4029052095.f
 /generated/shadercache/glsl/source/4077992128.f
 /generated/shadercache/glsl/source/4078214109.f
+/generated/shadercache/glsl/source/4083683224.f
 /generated/shadercache/glsl/source/4205543359.f
 /generated/shadercache/glsl/source/4230264545.v
 /generated/shadercache/glsl/source/425337378.f
+/generated/shadercache/glsl/source/439563717.f
 /generated/shadercache/glsl/source/443211020.v
 /generated/shadercache/glsl/source/46926815.v
 /generated/shadercache/glsl/source/497435929.f
@@ -116,6 +132,7 @@
 /generated/shadercache/glsl/source/583284658.f
 /generated/shadercache/glsl/source/592351480.f
 /generated/shadercache/glsl/source/602780342.f
+/generated/shadercache/glsl/source/619901298.f
 /generated/shadercache/glsl/source/629984128.f
 /generated/shadercache/glsl/source/636212411.f
 /generated/shadercache/glsl/source/640906481.f
@@ -126,6 +143,7 @@
 /generated/shadercache/glsl/source/722664453.v
 /generated/shadercache/glsl/source/728247992.f
 /generated/shadercache/glsl/source/738267064.f
+/generated/shadercache/glsl/source/754117423.f
 /generated/shadercache/glsl/source/764355423.f
 /generated/shadercache/glsl/source/781061046.f
 /generated/shadercache/glsl/source/782430437.f
@@ -133,5 +151,6 @@
 /generated/shadercache/glsl/source/831391474.v
 /generated/shadercache/glsl/source/843375311.v
 /generated/shadercache/glsl/source/948519385.f
+/generated/shadercache/glsl/source/974306968.f
 /pak001.sdmd2
 /usergroups.dat

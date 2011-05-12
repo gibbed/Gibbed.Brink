@@ -1,4 +1,4 @@
-; 155/166 (93%)
+; 161/166 (96%)
 /char/overlays/neutral/bodies/russian_tattoo_01.ccfimage
 /char/overlays/neutral/bodies/russian_tattoo_01.ccfimghd
 /credits.dat
@@ -38,12 +38,14 @@
 /generated/shadercache/glsl/source/152790904.v
 /generated/shadercache/glsl/source/1532114890.f
 /generated/shadercache/glsl/source/1533268256.f
+/generated/shadercache/glsl/source/1557009549.f
 /generated/shadercache/glsl/source/1564381091.f
 /generated/shadercache/glsl/source/1567997304.f
 /generated/shadercache/glsl/source/1570719241.f
 /generated/shadercache/glsl/source/1574817914.f
 /generated/shadercache/glsl/source/1586978992.v
 /generated/shadercache/glsl/source/1626248050.f
+/generated/shadercache/glsl/source/1646122280.f
 /generated/shadercache/glsl/source/1656713881.f
 /generated/shadercache/glsl/source/16620727.v
 /generated/shadercache/glsl/source/1701184442.f
@@ -61,9 +63,11 @@
 /generated/shadercache/glsl/source/2200898218.f
 /generated/shadercache/glsl/source/2205412014.v
 /generated/shadercache/glsl/source/22714360.f
+/generated/shadercache/glsl/source/2287196913.f
 /generated/shadercache/glsl/source/2322477528.f
 /generated/shadercache/glsl/source/2379020314.f
 /generated/shadercache/glsl/source/2412635345.f
+/generated/shadercache/glsl/source/2451406170.f
 /generated/shadercache/glsl/source/2459692087.f
 /generated/shadercache/glsl/source/2481641766.v
 /generated/shadercache/glsl/source/2551465840.f
@@ -71,6 +75,7 @@
 /generated/shadercache/glsl/source/257271355.f
 /generated/shadercache/glsl/source/2648734498.f
 /generated/shadercache/glsl/source/2714595854.f
+/generated/shadercache/glsl/source/2748279119.f
 /generated/shadercache/glsl/source/2755935169.f
 /generated/shadercache/glsl/source/2762661302.f
 /generated/shadercache/glsl/source/278518711.f
@@ -107,6 +112,7 @@
 /generated/shadercache/glsl/source/360090654.f
 /generated/shadercache/glsl/source/3681624082.f
 /generated/shadercache/glsl/source/3744119445.f
+/generated/shadercache/glsl/source/374496081.f
 /generated/shadercache/glsl/source/3780170962.f
 /generated/shadercache/glsl/source/3782944727.f
 /generated/shadercache/glsl/source/3841821268.v

@@ -1,4 +1,4 @@
-; 196/201 (97%)
+; 198/201 (98%)
 /generated/decl2/base/gui.dclb
 /generated/decl2/base/gui_toc.dclb
 /generated/decl2/base/locstring.dclb
@@ -28,6 +28,7 @@
 /generated/shadercache/glsl/source/118120774.f
 /generated/shadercache/glsl/source/1221524858.f
 /generated/shadercache/glsl/source/129875282.v
+/generated/shadercache/glsl/source/1308211568.v
 /generated/shadercache/glsl/source/131692474.v
 /generated/shadercache/glsl/source/1318165500.v
 /generated/shadercache/glsl/source/1344495602.v
@@ -124,6 +125,7 @@
 /generated/shadercache/glsl/source/3475536028.f
 /generated/shadercache/glsl/source/3523724981.v
 /generated/shadercache/glsl/source/3534916888.v
+/generated/shadercache/glsl/source/3550755237.f
 /generated/shadercache/glsl/source/3578023476.f
 /generated/shadercache/glsl/source/3582388680.f
 /generated/shadercache/glsl/source/3588976678.f

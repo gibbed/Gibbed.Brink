@@ -24,7 +24,7 @@ namespace Gibbed.Brink.FileFormats.Package
 {
     public class Entry
     {
-        public NameHash NameHash;
+        public NameHash NameHash; // MD5
         public long Offset;
         public long UncompressedSize;
         public int CompressedBlockSizeIndex;

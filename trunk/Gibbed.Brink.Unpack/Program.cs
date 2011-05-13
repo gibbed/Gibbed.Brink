@@ -229,16 +229,16 @@ namespace Gibbed.Brink.Unpack
                                 }
                                 else
                                 {
-                                    //var compressedBlock = input.ReadToMemoryStream(compressedBlockSize);
-                                    var uncompressedBlock = new InflaterInputStream(input);
+                                    var compressedBlock = input.ReadToMemoryStream(compressedBlockSize);
+                                    var uncompressedBlock = new InflaterInputStream(compressedBlock);
                                     output.WriteFromStream(uncompressedBlock, uncompressedBlockSize);
                                     uncompressedSize -= uncompressedBlockSize;
 
                                     // why would there be junk data...? :argh:
-                                    /*if (compressedBlock.Position != compressedBlock.Length)
+                                    if (compressedBlock.Position != compressedBlock.Length)
                                     {
                                         //throw new InvalidOperationException();
-                                    }*/
+                                    }
                                 }
                             }
                         }

@@ -128,13 +128,6 @@ namespace Gibbed.Brink.Unpack
 
                         string extension;
 
-                        if (entry.NameHash.A == 0 &&
-                            entry.NameHash.B == 0 &&
-                            entry.NameHash.C == 0 &&
-                            entry.NameHash.D == 0)
-                        {
-                        }
-
                         // detect type
                         {
                             var guess = new byte[16];
@@ -236,16 +229,16 @@ namespace Gibbed.Brink.Unpack
                                 }
                                 else
                                 {
-                                    var compressedBlock = input.ReadToMemoryStream(compressedBlockSize);
-                                    var uncompressedBlock = new InflaterInputStream(compressedBlock);
+                                    //var compressedBlock = input.ReadToMemoryStream(compressedBlockSize);
+                                    var uncompressedBlock = new InflaterInputStream(input);
                                     output.WriteFromStream(uncompressedBlock, uncompressedBlockSize);
                                     uncompressedSize -= uncompressedBlockSize;
 
                                     // why would there be junk data...? :argh:
-                                    if (compressedBlock.Position != compressedBlock.Length)
+                                    /*if (compressedBlock.Position != compressedBlock.Length)
                                     {
                                         //throw new InvalidOperationException();
-                                    }
+                                    }*/
                                 }
                             }
                         }

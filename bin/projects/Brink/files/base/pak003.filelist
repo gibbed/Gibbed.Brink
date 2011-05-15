@@ -1,4 +1,4 @@
-; 226/232 (97%)
+; 227/232 (97%)
 /device.startup
 /generated/decl2/base/entitydef.dclb
 /generated/decl2/base/entitydef_str.dclb
@@ -225,3 +225,4 @@
 /mapscripts/mp/sectow/fishbus_sec_matchcontroller.mscr
 /mapscripts/mp/shipyard/crane_controls_primary.mscr
 /mapscripts/mp/shipyard/map_setup.mscr
+/pak003.sdmd2

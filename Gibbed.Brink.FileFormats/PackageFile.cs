@@ -29,9 +29,12 @@ namespace Gibbed.Brink.FileFormats
 {
     public class PackageFile
     {
-        public ushort Version;
+        public ushort MajorVersion;
+        public ushort MinorVersion;
         public Package.CompressionFormat CompressionFormat;
-        public uint BlockSize;
+        public uint DataBlockSize;
+        public uint CompressedBlockValueSize;
+
         public List<Package.Entry> Entries
             = new List<Package.Entry>();
         public List<uint> CompressedBlockSizes
@@ -41,36 +44,36 @@ namespace Gibbed.Brink.FileFormats
         {
             if (input.Position + 32 > input.Length)
             {
-                throw new EndOfStreamException();
+                throw new EndOfStreamException("not enough data for header");
             }
 
             var magic = input.ReadValueU32(false);
             if (magic != 0x50534152) // PSAR
             {
-                throw new FormatException();
+                throw new FormatException("bad magic");
             }
 
-            this.Version = input.ReadValueU16(false);
-            if (this.Version != 1)
+            this.MajorVersion = input.ReadValueU16(false);
+            if (this.MajorVersion != 1)
             {
                 throw new FormatException("unsupported version");
             }
+            this.MinorVersion = input.ReadValueU16(false);
 
-            var unknown06 = input.ReadValueU16(false);
-            this.CompressionFormat = input.ReadValueEnum<Package.CompressionFormat>(false); // 160
-            var headerSize = input.ReadValueU32(false); // 164
-            var entrySize = input.ReadValueU32(false); // 168
-            var entryCount = input.ReadValueU32(false); // 172
-            this.BlockSize = input.ReadValueU32(false); // 176
-            var blockBlockSize = input.ReadValueU32(false); // 180
+            this.CompressionFormat = input.ReadValueEnum<Package.CompressionFormat>(false);
+            var headerSize = input.ReadValueU32(false);
+            var entrySize = input.ReadValueU32(false);
+            var entryCount = input.ReadValueU32(false);
+            this.DataBlockSize = input.ReadValueU32(false);
+            this.CompressedBlockValueSize = input.ReadValueU32(false);
 
-            if (entrySize != 0x1E || blockBlockSize != 2)
+            if (entrySize != 30 || this.CompressedBlockValueSize != 2)
             {
-                throw new FormatException();
+                throw new FormatException("unsupported values in header");
             }
             else if (entryCount * entrySize > (headerSize - 32))
             {
-                throw new FormatException();
+                throw new FormatException("entry data exceeds header size");
             }
 
             var extraSize = headerSize - 32;
@@ -106,13 +109,10 @@ namespace Gibbed.Brink.FileFormats
 
                 if (entry.CompressedBlockSizeIndex > this.CompressedBlockSizes.Count)
                 {
-                    throw new FormatException();
+                    throw new FormatException("entry compressed block size index out of bounds");
                 }
 
-                //if (entry.CompressedBlockSizeIndex == 2)
-                {
-                    this.Entries.Add(entry);
-                }
+                this.Entries.Add(entry);
             }
         }
     }

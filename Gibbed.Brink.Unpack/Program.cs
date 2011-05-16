@@ -104,140 +104,147 @@ namespace Gibbed.Brink.Unpack
                 var pkg = new PackageFile();
                 pkg.Deserialize(input);
 
-                long current = 1;
-                long total = pkg.Entries.Count;
-
-                foreach (var entry in pkg.Entries)
+                if (pkg.CompressionFormat != FileFormats.Package.CompressionFormat.ZLib)
                 {
-                    string name = null;
-                    bool isUnknown = false;
+                    Console.WriteLine("Can't extract non-zlib packages.");
+                }
+                else
+                {
+                    long current = 1;
+                    long total = pkg.Entries.Count;
 
-                    if (project != null)
+                    foreach (var entry in pkg.Entries)
                     {
-                        name = project.GetFileName(entry.NameHash);
-                    }
+                        string name = null;
+                        bool isUnknown = false;
 
-                    if (name == null)
-                    {
-                        if (extractUnknowns == false)
+                        if (project != null)
                         {
-                            continue;
+                            name = project.GetFileName(entry.NameHash);
                         }
 
-                        isUnknown = true;
-
-                        string extension;
-
-                        // detect type
+                        if (name == null)
                         {
-                            var guess = new byte[16];
-                            int read = 0;
-
-                            if (entry.UncompressedSize > 0)
+                            if (extractUnknowns == false)
                             {
-                                input.Seek(entry.Offset, SeekOrigin.Begin);
-                                var uncompressedBlockSize = (uint)Math.Min(pkg.BlockSize, entry.UncompressedSize);
-                                var compressedBlockSize = pkg.CompressedBlockSizes[entry.CompressedBlockSizeIndex];
-
-                                if (compressedBlockSize > uncompressedBlockSize)
-                                {
-                                    throw new InvalidOperationException();
-                                }
-
-                                if (compressedBlockSize == 0 ||
-                                    entry.UncompressedSize == compressedBlockSize)
-                                {
-                                    if (compressedBlockSize == 0)
-                                    {
-                                        compressedBlockSize = pkg.BlockSize;
-                                    }
-
-                                    read = input.Read(guess, 0, (int)Math.Min(uncompressedBlockSize, guess.Length));
-                                }
-                                else
-                                {
-                                    var compressedBlock = input.ReadToMemoryStream(compressedBlockSize);
-                                    var uncompressedBlock = new InflaterInputStream(compressedBlock);
-                                    read = uncompressedBlock.Read(guess, 0, (int)Math.Min(uncompressedBlockSize, guess.Length));
-                                }
+                                continue;
                             }
 
-                            extension = FileExtensions.Detect(guess, read);
-                        }
+                            isUnknown = true;
 
-                        name = entry.NameHash.ToString();
-                        name = Path.ChangeExtension(name, "." + extension);
-                        name = Path.Combine(extension, name);
-                        name = Path.Combine("__UNKNOWN", name);
-                    }
-                    else
-                    {
-                        name = name.Replace("/", "\\");
-                        if (name.StartsWith("\\") == true)
-                        {
-                            name = name.Substring(1);
-                        }
-                    }
+                            string extension;
 
-                    Console.WriteLine("[{0}/{1}] {2}",
-                        current, total, name);
-                    current++;
-
-                    var entryPath = Path.Combine(outputPath, name);
-                    Directory.CreateDirectory(Path.GetDirectoryName(entryPath));
-
-                    if (overwriteFiles == false &&
-                        File.Exists(entryPath) == true)
-                    {
-                        continue;
-                    }
-
-                    using (var output = File.Create(entryPath))
-                    {
-                        if (entry.UncompressedSize > 0)
-                        {
-                            input.Seek(entry.Offset, SeekOrigin.Begin);
-
-                            var index = entry.CompressedBlockSizeIndex;
-                            var uncompressedSize = entry.UncompressedSize;
-                            while (uncompressedSize > 0)
+                            // detect type
                             {
-                                var uncompressedBlockSize = Math.Min(pkg.BlockSize, uncompressedSize);
-                                var compressedBlockSize = pkg.CompressedBlockSizes[index++];
+                                var guess = new byte[16];
+                                int read = 0;
 
-                                if (compressedBlockSize > uncompressedBlockSize)
+                                if (entry.UncompressedSize > 0)
                                 {
-                                    throw new InvalidOperationException();
-                                }
+                                    input.Seek(entry.Offset, SeekOrigin.Begin);
+                                    var uncompressedBlockSize = (uint)Math.Min(pkg.DataBlockSize, entry.UncompressedSize);
+                                    var compressedBlockSize = pkg.CompressedBlockSizes[entry.CompressedBlockSizeIndex];
 
-                                if (compressedBlockSize == 0 ||
-                                    uncompressedSize == compressedBlockSize)
-                                {
-                                    if (compressedBlockSize == 0)
-                                    {
-                                        compressedBlockSize = pkg.BlockSize;
-                                    }
-
-                                    output.WriteFromStream(input, compressedBlockSize);
-
-                                    if (uncompressedBlockSize != compressedBlockSize)
+                                    if (compressedBlockSize > uncompressedBlockSize)
                                     {
                                         throw new InvalidOperationException();
                                     }
 
-                                    uncompressedSize -= compressedBlockSize;
-                                }
-                                else
-                                {
-                                    var compressedBlock = input.ReadToMemoryStream(compressedBlockSize);
-                                    var uncompressedBlock = new InflaterInputStream(compressedBlock);
-                                    output.WriteFromStream(uncompressedBlock, uncompressedBlockSize);
-                                    uncompressedSize -= uncompressedBlockSize;
-
-                                    // why would there be junk data...? :argh:
-                                    if (compressedBlock.Position != compressedBlock.Length)
+                                    if (compressedBlockSize == 0 ||
+                                        entry.UncompressedSize == compressedBlockSize)
                                     {
-                                        //throw new InvalidOperationException();
+                                        if (compressedBlockSize == 0)
+                                        {
+                                            compressedBlockSize = pkg.DataBlockSize;
+                                        }
+
+                                        read = input.Read(guess, 0, (int)Math.Min(uncompressedBlockSize, guess.Length));
+                                    }
+                                    else
+                                    {
+                                        var compressedBlock = input.ReadToMemoryStream(compressedBlockSize);
+                                        var uncompressedBlock = new InflaterInputStream(compressedBlock);
+                                        read = uncompressedBlock.Read(guess, 0, (int)Math.Min(uncompressedBlockSize, guess.Length));
+                                    }
+                                }
+
+                                extension = FileExtensions.Detect(guess, read);
+                            }
+
+                            name = entry.NameHash.ToString();
+                            name = Path.ChangeExtension(name, "." + extension);
+                            name = Path.Combine(extension, name);
+                            name = Path.Combine("__UNKNOWN", name);
+                        }
+                        else
+                        {
+                            name = name.Replace("/", "\\");
+                            if (name.StartsWith("\\") == true)
+                            {
+                                name = name.Substring(1);
+                            }
+                        }
+
+                        Console.WriteLine("[{0}/{1}] {2}",
+                            current, total, name);
+                        current++;
+
+                        var entryPath = Path.Combine(outputPath, name);
+                        Directory.CreateDirectory(Path.GetDirectoryName(entryPath));
+
+                        if (overwriteFiles == false &&
+                            File.Exists(entryPath) == true)
+                        {
+                            continue;
+                        }
+
+                        using (var output = File.Create(entryPath))
+                        {
+                            if (entry.UncompressedSize > 0)
+                            {
+                                input.Seek(entry.Offset, SeekOrigin.Begin);
+
+                                var index = entry.CompressedBlockSizeIndex;
+                                var uncompressedSize = entry.UncompressedSize;
+                                while (uncompressedSize > 0)
+                                {
+                                    var uncompressedBlockSize = Math.Min(pkg.DataBlockSize, uncompressedSize);
+                                    var compressedBlockSize = pkg.CompressedBlockSizes[index++];
+
+                                    if (compressedBlockSize > uncompressedBlockSize)
+                                    {
+                                        throw new InvalidOperationException();
+                                    }
+
+                                    if (compressedBlockSize == 0 ||
+                                        uncompressedSize == compressedBlockSize)
+                                    {
+                                        if (compressedBlockSize == 0)
+                                        {
+                                            compressedBlockSize = pkg.DataBlockSize;
+                                        }
+
+                                        output.WriteFromStream(input, compressedBlockSize);
+
+                                        if (uncompressedBlockSize != compressedBlockSize)
+                                        {
+                                            throw new InvalidOperationException();
+                                        }
+
+                                        uncompressedSize -= compressedBlockSize;
+                                    }
+                                    else
+                                    {
+                                        var compressedBlock = input.ReadToMemoryStream(compressedBlockSize);
+                                        var uncompressedBlock = new InflaterInputStream(compressedBlock);
+                                        output.WriteFromStream(uncompressedBlock, uncompressedBlockSize);
+                                        uncompressedSize -= uncompressedBlockSize;
+
+                                        // why would there be junk data...? :argh:
+                                        if (compressedBlock.Position != compressedBlock.Length)
+                                        {
+                                            //throw new InvalidOperationException();
+                                        }
                                     }
                                 }
                             }
